@@ -136,7 +136,6 @@ module.exports = function(RED) {
             }
         })
         this.on("input", function(msg, send, done) {
-
 			const millisecondsUp  = ((new Date()).getTime() - node.statusTimerUp.getTime())
 			node.statusTimerUp = new Date()
 
@@ -237,13 +236,13 @@ module.exports = function(RED) {
         RED.comms.publish("debug",msg);
     }
 
-    DebugNode.logHandler = new events.EventEmitter();
-    DebugNode.logHandler.on("log",function(msg) {
-        if (msg.level === RED.log.WARN || msg.level === RED.log.ERROR) {
-            sendDebug(msg);
-        }
-    });
-    RED.log.addHandler(DebugNode.logHandler);
+//    DebugNode.logHandler = new events.EventEmitter();
+//    DebugNode.logHandler.on("log",function(msg) {
+//        if (msg.level === RED.log.WARN || msg.level === RED.log.ERROR) {
+//            sendDebug(msg);
+//        }
+//    });
+//    RED.log.addHandler(DebugNode.logHandler);
 
     RED.httpAdmin.post("/debug/:state", RED.auth.needsPermission("debug.write"), function(req,res) {
         var state = req.params.state;
