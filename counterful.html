@@ -76,7 +76,7 @@ It works exacly like the official debug node. It also diplays a counter of the n
             tosidebar: {value:true},
             console: {value:false},
             tostatus: {value:false},
-            complete: {value:"false", required:true},
+            complete: {value:"true", required:true},
             targetType: {value:undefined},
             statusVal: {value:""},
             statusType: {value:"auto"}
@@ -457,13 +457,13 @@ It works exacly like the official debug node. It also diplays a counter of the n
                 var property = this.complete || "";
                 $("#node-input-typed-complete").typedInput('type','jsonata');
                 $("#node-input-typed-complete").typedInput('value',property);
-            } else if ((this.targetType === "full") || this.complete === "true" || this.complete === true) {
-                // show complete message object
-                $("#node-input-typed-complete").typedInput('type','full');
-            } else {
+            } else if ((this.targetType === "msg") || this.complete === "false" || this.complete === false) {
                 var property = (!this.complete||(this.complete === "false")) ? "payload" : this.complete+"";
                 $("#node-input-typed-complete").typedInput('type','msg');
                 $("#node-input-typed-complete").typedInput('value',property);
+            } else {
+                // show complete message object
+                $("#node-input-typed-complete").typedInput('type','full');
             }
             $("#node-input-typed-complete").on('change',function() {
                 if ($("#node-input-typed-complete").typedInput('type') === 'msg' &&
