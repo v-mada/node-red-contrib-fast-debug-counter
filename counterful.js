@@ -218,7 +218,7 @@ module.exports = function(RED) {
         })
     }
 
-    RED.nodes.registerType("counter",DebugNode, {
+    RED.nodes.registerType("counterful",DebugNode, {
         settings: {
             debugUseColors: {
                 value: false,
