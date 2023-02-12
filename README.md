@@ -1,3 +1,6 @@
+## This Fork
+This is an experimental fork of @ramuyk's fast debug counter to attempt to make 'complete msg object' the default output (essentially, combining the benefits of the counter with a somewhat unrelated change, both making the debug node more convenient to use. 
+
 ## Overview
 This node is based on the official debug node from Node-RED. It displays selected message properties in the debug sidebar tab and optionally the runtime log with the addition of showing a counter of messages on its status.
 
