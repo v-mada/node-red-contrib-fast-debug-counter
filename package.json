@@ -1,6 +1,6 @@
 {
     "name" : "node-red-contrib-fast-debug-counterful",
-	"version": "1.4.0",
+	"version": "1.4.1",
 	"dependencies": {
 		"util": "*",
 		"events": "*",
