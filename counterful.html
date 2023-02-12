@@ -1,4 +1,4 @@
-<script type="text/markdown" data-help-name="counter">
+<script type="text/markdown" data-help-name="counterful">
 ## Overview
 This node is based on the official debug node from Node-RED. It displays selected message properties in the debug sidebar tab and optionally the runtime log with the addition of showing a counter of messages on its status.
 
@@ -7,7 +7,7 @@ It works exacly like the official debug node. It also diplays a counter of the n
 
 </script>
 
-<script type="text/html" data-template-name="counter">
+<script type="text/html" data-template-name="counterful">
     <div class="form-row">
         <label for="node-input-typed-complete"><i class="fa fa-list"></i> <span data-i18n="node-red:debug.output"></span></label>
         <input id="node-input-typed-complete" type="text" style="width: 70%">
@@ -68,7 +68,7 @@ It works exacly like the official debug node. It also diplays a counter of the n
         });
     }
 
-    RED.nodes.registerType('counter',{
+    RED.nodes.registerType('counterful',{
         category: 'common',
         defaults: {
             name: {value:""},
@@ -82,7 +82,7 @@ It works exacly like the official debug node. It also diplays a counter of the n
             statusType: {value:"auto"}
         },
         label: function() {
-            return this.name||this._("counter");;
+            return this.name||this._("counterful");;
 //            var suffix = "";
 //            if (this.console === true || this.console === "true") { suffix = " ⇲"; }
 //            if (this.targetType === "jsonata") {
