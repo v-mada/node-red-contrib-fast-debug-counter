@@ -21,7 +21,7 @@ module.exports = function(RED) {
     const fs = require("fs-extra");
     const path = require("path");
     var debuglength = RED.settings.debugMaxLength || 1000;
-    var useColors = RED.settings.debugUseColors || false;
+    var useColors = false;
     util.inspect.styles.boolean = "red";
     const { hasOwnProperty } = Object.prototype;
 
