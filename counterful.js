@@ -220,9 +220,6 @@ module.exports = function(RED) {
 
     RED.nodes.registerType("counterful",DebugNode, {
         settings: {
-            debugUseColors: {
-                value: false,
-            },
             debugMaxLength: {
                 value: 1000,
             }
